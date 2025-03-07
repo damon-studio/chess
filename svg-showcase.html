@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迷你国际象棋 - SVG资源展示</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        .svg-container {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .svg-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .phone-frame {
+            width: 375px;
+            height: 667px;
+            border-radius: 36px;
+            overflow: hidden;
+            border: 12px solid #1a1a1a;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <header class="text-center mb-12">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">迷你国际象棋</h1>
+        <p class="text-gray-600">SVG资源展示</p>
+    </header>
+    
+    <div class="max-w-6xl mx-auto">
+        <!-- 棋子展示 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">棋子SVG</h2>
+            <div class="svg-container p-4">
+                <iframe src="chess-pieces.svg" height="600"></iframe>
+            </div>
+            <p class="mt-4 text-gray-600 text-center">棋子SVG包含了所有国际象棋棋子的矢量图形，采用微软纸牌简约风格设计。</p>
+        </section>
+        
+        <!-- 棋盘展示 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">棋盘SVG</h2>
+            <div class="svg-container p-4">
+                <iframe src="chess-board.svg" height="500"></iframe>
+            </div>
+            <p class="mt-4 text-gray-600 text-center">5x5棋盘SVG展示了初始棋局布局，包括黑白双方的所有棋子。</p>
+        </section>
+        
+        <!-- 动画展示 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">动画SVG</h2>
+            <div class="svg-container p-4">
+                <iframe src="chess-animation.svg" height="500"></iframe>
+            </div>
+            <p class="mt-4 text-gray-600 text-center">动画SVG展示了棋子移动的动画效果，包括高亮选中格子和可能的移动位置。</p>
+        </section>
+        
+        <!-- 图标展示 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">图标SVG</h2>
+            <div class="svg-container p-4">
+                <iframe src="chess-icons.svg" height="600"></iframe>
+            </div>
+            <p class="mt-4 text-gray-600 text-center">图标SVG包含了游戏界面中需要的各种按钮和功能图标。</p>
+        </section>
+        
+        <!-- 游戏界面展示 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">游戏界面</h2>
+            <div class="flex flex-wrap justify-center gap-12">
+                <!-- 游戏界面 -->
+                <div class="flex flex-col items-center">
+                    <div class="phone-frame">
+                        <iframe src="game.html" title="Game Screen"></iframe>
+                    </div>
+                    <p class="mt-4 text-gray-600">游戏界面</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer class="text-center mt-12 text-gray-500 text-sm">
+        <p>迷你国际象棋 - 5x5棋盘的简化版国际象棋游戏</p>
+        <p class="mt-2">© 2023 版权所有</p>
+    </footer>
+</body>
+</html> 

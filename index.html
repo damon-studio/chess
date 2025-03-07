@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Chess - Prototype Screens</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+        .phone-frame {
+            width: 375px;
+            height: 667px;
+            border-radius: 36px;
+            overflow: hidden;
+            border: 12px solid #1a1a1a;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .phone-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .screen-title {
+            font-weight: 600;
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <h1 class="text-3xl font-bold text-center mb-8">Mini Chess - Prototype Screens</h1>
+    
+    <div class="flex flex-wrap justify-center gap-12">
+        <!-- Home Screen -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <iframe src="home.html" title="Home Screen"></iframe>
+            </div>
+            <p class="screen-title">Home Screen</p>
+        </div>
+        
+        <!-- Game Screen -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <iframe src="game.html" title="Game Screen"></iframe>
+            </div>
+            <p class="screen-title">Game Screen</p>
+        </div>
+        
+        <!-- End Game Screen -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <iframe src="end.html" title="End Game Screen"></iframe>
+            </div>
+            <p class="screen-title">End Game Screen</p>
+        </div>
+        
+        <!-- Settings Screen -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <iframe src="settings.html" title="Settings Screen"></iframe>
+            </div>
+            <p class="screen-title">Settings Screen</p>
+        </div>
+    </div>
+</body>
+</html> 

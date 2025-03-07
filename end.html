@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Chess - Game Over</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+        
+        <!-- Navigation Bar -->
+        <div class="nav-bar">
+            <button class="action">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="title">Game Result</div>
+            <button class="action">
+                <i class="fas fa-share-alt"></i>
+            </button>
+        </div>
+        
+        <!-- Content -->
+        <div class="content flex flex-col items-center justify-between py-8">
+            <!-- Result Banner -->
+            <div class="w-full bg-blue-500 text-white rounded-xl p-6 text-center mb-8">
+                <h2 class="text-2xl font-bold mb-2">Checkmate!</h2>
+                <p class="text-lg">White wins the game</p>
+            </div>
+            
+            <!-- Game Stats -->
+            <div class="w-full bg-white rounded-xl p-6 mb-8 shadow-sm">
+                <h3 class="text-lg font-semibold mb-4">Game Statistics</h3>
+                
+                <div class="flex justify-between items-center mb-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center border border-gray-300">
+                            <i class="fas fa-user text-blue-600 text-sm"></i>
+                        </div>
+                        <span>White Player</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-trophy text-yellow-500 mr-2"></i>
+                        <span class="font-semibold">Winner</span>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-white text-sm"></i>
+                        </div>
+                        <span>Black Player</span>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-200 pt-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center">
+                            <p class="text-gray-500 text-sm">Moves</p>
+                            <p class="font-semibold text-lg">12</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-gray-500 text-sm">Time</p>
+                            <p class="font-semibold text-lg">02:45</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-gray-500 text-sm">Captures</p>
+                            <p class="font-semibold text-lg">4</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-gray-500 text-sm">Checks</p>
+                            <p class="font-semibold text-lg">2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Final Board State Preview -->
+            <div class="w-full bg-white rounded-xl p-4 mb-8 shadow-sm">
+                <h3 class="text-lg font-semibold mb-2">Final Position</h3>
+                <div class="chess-board-mini">
+                    <img src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?ixlib=rb-1.2.1&auto=format&fit=crop&w=320&q=80" alt="Final chess position" class="w-full rounded-lg">
+                </div>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="w-full max-w-xs space-y-4">
+                <button class="btn btn-primary w-full flex items-center justify-center gap-2">
+                    <i class="fas fa-redo mr-2"></i>
+                    Play Again
+                </button>
+                
+                <button class="btn btn-secondary w-full flex items-center justify-center gap-2">
+                    <i class="fas fa-search mr-2"></i>
+                    Review Game
+                </button>
+                
+                <button class="btn btn-secondary w-full flex items-center justify-center gap-2">
+                    <i class="fas fa-home mr-2"></i>
+                    Back to Home
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

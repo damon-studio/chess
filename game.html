@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Chess - Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .chess-board {
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+        
+        <!-- Navigation Bar -->
+        <div class="nav-bar">
+            <button class="action">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="title">Mini Chess</div>
+            <button class="action">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
+        </div>
+        
+        <!-- Content -->
+        <div class="content flex flex-col items-center justify-between py-4">
+            <!-- Game Info - Black Player -->
+            <div class="game-info w-full mb-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-white text-sm"></i>
+                        </div>
+                        <span class="font-semibold">Black Player</span>
+                    </div>
+                    <div class="captured-pieces flex gap-1">
+                        <!-- Captured white pieces would appear here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chess Board -->
+            <div class="chess-board mb-4">
+                <!-- Row 1 (Black's bottom row) -->
+                <div class="chess-square white-square">
+                    <div class="chess-piece black-piece">
+                        <i class="fas fa-chess-rook"></i>
+                    </div>
+                </div>
+                <div class="chess-square black-square">
+                    <div class="chess-piece black-piece">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                </div>
+                <div class="chess-square white-square">
+                    <div class="chess-piece black-piece">
+                        <i class="fas fa-chess-bishop"></i>
+                    </div>
+                </div>
+                <div class="chess-square black-square">
+                    <div class="chess-piece black-piece">
+                        <i class="fas fa-chess-king"></i>
+                    </div>
+                </div>
+                <div class="chess-square white-square">
+                    <div class="chess-piece black-piece">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+                
+                <!-- Row 2 (Black's pawns) -->
+                <div class="chess-square black-square">
+                    <div class="chess-piece black-piece">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+                <div class="chess-square white-square">
+                    <div class="chess-piece black-piece">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+                <div class="chess-square black-square">
+                    <div class="chess-piece black-piece">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+                <div class="chess-square white-square">
+                    <div class="chess-piece black-piece">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+                <div class="chess-square black-square">
+                    <div class="chess-piece black-piece">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+                
+                <!-- Row 3 (Middle row - empty) -->
+                <div class="chess-square white-square"></div>
+                <div class="chess-square black-square"></div>
+                <div class="chess-square white-square"></div>
+                <div class="chess-square black-square"></div>
+                <div class="chess-square white-square"></div>
+                
+                <!-- Row 4 (White's pawns) -->
+                <div class="chess-square black-square">
+                    <div class="chess-piece white-piece">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+                <div class="chess-square white-square">
+                    <div class="chess-piece white-piece">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+                <div class="chess-square black-square">
+                    <div class="chess-piece white-piece">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+                <div class="chess-square white-square">
+                    <div class="chess-piece white-piece">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+                <div class="chess-square black-square">
+                    <div class="chess-piece white-piece">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+                
+                <!-- Row 5 (White's bottom row) -->
+                <div class="chess-square white-square">
+                    <div class="chess-piece white-piece">
+                        <i class="fas fa-chess-rook"></i>
+                    </div>
+                </div>
+                <div class="chess-square black-square">
+                    <div class="chess-piece white-piece">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                </div>
+                <div class="chess-square white-square">
+                    <div class="chess-piece white-piece">
+                        <i class="fas fa-chess-bishop"></i>
+                    </div>
+                </div>
+                <div class="chess-square black-square">
+                    <div class="chess-piece white-piece">
+                        <i class="fas fa-chess-king"></i>
+                    </div>
+                </div>
+                <div class="chess-square white-square">
+                    <div class="chess-piece white-piece">
+                        <i class="fas fa-chess-pawn"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Game Info - White Player -->
+            <div class="game-info w-full mb-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center border border-gray-300">
+                            <i class="fas fa-user text-blue-600 text-sm"></i>
+                        </div>
+                        <span class="font-semibold">White Player</span>
+                    </div>
+                    <div class="captured-pieces flex gap-1">
+                        <!-- Captured black pieces would appear here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Game Controls -->
+            <div class="w-full flex flex-col gap-4">
+                <!-- Turn Indicator -->
+                <div class="turn-indicator bg-white p-3 rounded-lg shadow-sm flex justify-between items-center">
+                    <div class="flex items-center">
+                        <div class="indicator white mr-2"></div>
+                        <span>White's Turn</span>
+                    </div>
+                    <div class="text-gray-500">
+                        <i class="fas fa-clock mr-1"></i>
+                        <span>00:45</span>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex gap-2">
+                    <button class="btn btn-secondary flex-1">
+                        <i class="fas fa-undo mr-2"></i>
+                        Undo
+                    </button>
+                    <button class="btn btn-secondary flex-1">
+                        <i class="fas fa-flag mr-2"></i>
+                        Resign
+                    </button>
+                    <button class="btn btn-secondary flex-1">
+                        <i class="fas fa-handshake mr-2"></i>
+                        Draw
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
