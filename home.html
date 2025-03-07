@@ -7,6 +7,28 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 适应1080x2337分辨率 */
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .container {
+            width: 100%;
+            height: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        
+        .chess-piece-preview {
+            transition: transform 0.3s ease;
+        }
+        
+        .chess-piece-preview:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -23,58 +45,40 @@
         <!-- Content -->
         <div class="content flex flex-col items-center justify-between py-8">
             <!-- Logo and Title -->
-            <div class="text-center mb-12 mt-8">
-                <div class="mx-auto mb-6 w-24 h-24 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-chess text-blue-600 text-5xl"></i>
+            <div class="text-center mb-16 mt-10">
+                <div class="mx-auto mb-8 w-32 h-32 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-chess text-blue-600 text-6xl"></i>
                 </div>
-                <h1 class="text-3xl font-bold mb-2">Mini Chess</h1>
-                <p class="text-gray-600">5x5 Simplified Chess Game</p>
+                <h1 class="text-4xl font-bold mb-3">Mini Chess</h1>
+                <p class="text-gray-600 text-xl">4x5 Simplified Chess Game</p>
             </div>
             
             <!-- Game Options -->
-            <div class="w-full max-w-xs space-y-4 mb-12">
-                <button class="btn btn-primary w-full flex items-center justify-center gap-2">
+            <div class="w-full max-w-sm mb-16">
+                <button class="btn btn-primary w-full flex items-center justify-center gap-3 text-xl py-4" onclick="window.location.href='game.html'">
                     <i class="fas fa-play mr-2"></i>
-                    New Game
-                </button>
-                
-                <button class="btn btn-secondary w-full flex items-center justify-center gap-2">
-                    <i class="fas fa-robot mr-2"></i>
-                    Play vs Computer
-                </button>
-                
-                <button class="btn btn-secondary w-full flex items-center justify-center gap-2">
-                    <i class="fas fa-trophy mr-2"></i>
-                    Game History
-                </button>
-                
-                <button class="btn btn-secondary w-full flex items-center justify-center gap-2">
-                    <i class="fas fa-cog mr-2"></i>
-                    Settings
+                    Start Game
                 </button>
             </div>
             
             <!-- Chess Piece Preview -->
-            <div class="flex justify-center gap-4 mb-8">
+            <div class="flex justify-center gap-6 mb-10">
                 <div class="chess-piece-preview">
-                    <i class="fas fa-chess-rook text-4xl text-blue-600"></i>
+                    <i class="fas fa-chess-rook text-5xl text-blue-600"></i>
                 </div>
                 <div class="chess-piece-preview">
-                    <i class="fas fa-chess-knight text-4xl text-blue-600"></i>
+                    <i class="fas fa-chess-knight text-5xl text-blue-600"></i>
                 </div>
                 <div class="chess-piece-preview">
-                    <i class="fas fa-chess-bishop text-4xl text-blue-600"></i>
+                    <i class="fas fa-chess-bishop text-5xl text-blue-600"></i>
                 </div>
                 <div class="chess-piece-preview">
-                    <i class="fas fa-chess-king text-4xl text-blue-600"></i>
-                </div>
-                <div class="chess-piece-preview">
-                    <i class="fas fa-chess-pawn text-4xl text-blue-600"></i>
+                    <i class="fas fa-chess-king text-5xl text-blue-600"></i>
                 </div>
             </div>
             
             <!-- Footer -->
-            <div class="text-center text-gray-500 text-sm">
+            <div class="text-center text-gray-500 text-base">
                 <p>Version 1.0</p>
             </div>
         </div>

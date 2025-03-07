@@ -18,6 +18,9 @@ body {
     padding: 0;
     background-color: var(--light-bg);
     color: var(--text-dark);
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 /* Status bar styling */
@@ -96,12 +99,14 @@ body {
 /* Chess board styling */
 .chess-board {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 1px;
     border: 2px solid var(--dark-bg);
     border-radius: 8px;
     overflow: hidden;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .chess-square {
@@ -208,12 +213,14 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    aspect-ratio: 1080/2337;
 }
 
 .content {
     flex: 1;
     padding: 16px;
     overflow-y: auto;
+    padding: 20px;
 }
 
 /* Animation for piece movement */
@@ -231,4 +238,29 @@ body {
 
 .moving {
     animation: move-piece 0.3s ease;
+}
+
+/* 响应式调整 */
+@media (min-width: 768px) {
+    .chess-board {
+        max-width: 80%;
+    }
+    
+    .content {
+        padding: 24px;
+    }
+    
+    .btn {
+        padding: 14px 28px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .chess-board {
+        max-width: 70%;
+    }
+    
+    .content {
+        padding: 28px;
+    }
 } 
